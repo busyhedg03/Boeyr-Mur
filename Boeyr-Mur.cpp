@@ -51,10 +51,14 @@ int main() {
 		getline(fin, readString);
 		mainString += "\n" + readString;
 	}
-	for (int i{ 0 }; i < mainString.length(); ++i){ 
-		if (mainString[i] == '-' &&
-			mainString[i + 1] == '\n') {
-			mainString.erase(i, 1);
+	for (int i{ 0 }; i < mainString.length(); ++i) {
+		if (mainString[i + 1] == '\n') {
+			if (mainString[i] == '-') {
+				mainString.erase(i, 2);
+			}
+			else {
+				mainString[i + 1] = ' ';
+			}
 		}
 	}
 	fin.close();
