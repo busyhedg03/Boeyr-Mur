@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <fstream>
 int seeekSubStr(std::string mainS, std::string subS) {
 	using namespace std;
 	int mainLength{ (int)mainS.length() };
@@ -44,7 +45,20 @@ int main() {
 	using namespace std;
 	string mainString{""};
 	string subStr{ "" };
-	getline(cin, mainString);
+	ifstream fin("input.txt");
+	string readString{""};
+	while (!fin.eof()) {
+		getline(fin, readString);
+		mainString += "\n" + readString;
+	}
+	for (int i{ 0 }; i < mainString.length(); ++i){ 
+		if (mainString[i] == '-' &&
+			mainString[i + 1] == '\n') {
+			mainString.erase(i, 1);
+		}
+	}
+	fin.close();
+	cout << mainString << "\n\nEnter the string you want to search: ";
 	getline(cin, subStr);
 	seeekSubStr(mainString, subStr);
 	return 0;
