@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
-#include "boeyr.h"
+#include "boyer.h"
 
 int main() {
 	using namespace std;

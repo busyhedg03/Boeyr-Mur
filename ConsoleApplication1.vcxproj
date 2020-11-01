@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Boeyr-Mur.cpp" />
-    <ClCompile Include="Boeyr.cpp" />
+    <ClCompile Include="Boyer-Moor.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Boeyr.h" />
+    <ClInclude Include="Boyer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

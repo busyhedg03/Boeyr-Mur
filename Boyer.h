@@ -1,5 +1,5 @@
 #include <iostream>
-#ifndef BOEYR_H
-#define BOEYR_H
+#ifndef BOYER_H
+#define BOYER_H
 int seeekSubStr(std::string mainS, std::string subS);
 #endif
